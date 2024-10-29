@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mudar Tema entre Dark e Light</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        margin: 0;
+        transition: background-color 0.5s, color 0.5s;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+
+      .dark {
+        background-color: #1e1e1e;
+        color: #f0f0f0;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 25px;
+        background-color: #3498db;
+        color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        transition: all 0.3s;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .icon {
+        font-size: 20px;
+      }
+
+      .dark .icon-sun {
+        display: none;
+      }
+
+      .icon-moon {
+        display: none;
+      }
+
+      .dark .icon-moon {
+        display: inline;
+      }
+
+      .icon-sun {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn" onclick="document.body.classList.toggle('dark')">
+      <span class="icon icon-sun">☀️</span>
+      <span class="icon icon-moon">🌙</span>
+      Mudar Tema
+    </button>
+  </body>
+</html>
